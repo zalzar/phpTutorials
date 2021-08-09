@@ -1,12 +1,14 @@
 <?php
     $ninjas = ['Ali','Rali','Nadim'];
     $products=[
-        ['name'=>'Shampoo','Price'=>20],
-        ['name'=>'Soap','Price'=>10],
-        ['name'=>'Toothbrush','Price'=>5],
-        ['name'=>'Toothpaste','Price'=>9]
+        ['Name'=>'Shampoo','Price'=>20],
+        ['Name'=>'Soap','Price'=>10],
+        ['Name'=>'Toothbrush','Price'=>5],
+        ['Name'=>'Blade','Price'=>15],
+        ['Name'=>'Mirror','Price'=>150],
+        ['Name'=>'Air freshener','Price'=>35],
+        ['Name'=>'Toothpaste','Price'=>9]
     ];
-
     
 
     
@@ -21,10 +23,15 @@
 <body>
     <h1>Products</h1>
     <ul>
-        <?php foreach ($products as $product) { ?> 
-            <h4><?php echo $product['name']; ?></h4>
-            <p>$<?php echo $product['Price']; ?></p>
-        <?php } ?>    
+        <?php foreach ($products as $product) { 
+            if($product['Price']<=30 && $product['Price']>5) {?>
+            <h4><?php echo $product['Name']; ?></h4>
+            <p> <?php echo $product['Price']; ?></p>
+        <?php } } ?>
     </ul>
+
+
+
+
 </body>
 </html>

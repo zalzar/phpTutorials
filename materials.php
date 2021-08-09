@@ -18,6 +18,8 @@
         ['Name'=>'Air freshener','Price'=>35],
         ['Name'=>'Toothpaste','Price'=>9]
     ];
+
+    
 ?>
 <html lang="en">
 <head>
