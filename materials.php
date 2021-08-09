@@ -19,7 +19,7 @@
         ['Name'=>'Toothpaste','Price'=>9]
     ];
 
-    
+
 ?>
 <html lang="en">
 <head>

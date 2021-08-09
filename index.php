@@ -1,18 +1,12 @@
 <?php
-    $ninjas = ['Ali','Rali','Nadim'];
-    $products=[
-        ['Name'=>'Shampoo','Price'=>20],
-        ['Name'=>'Soap','Price'=>10],
-        ['Name'=>'Toothbrush','Price'=>5],
-        ['Name'=>'Blade','Price'=>15],
-        ['Name'=>'Mirror','Price'=>150],
-        ['Name'=>'Air freshener','Price'=>35],
-        ['Name'=>'Toothpaste','Price'=>9]
-    ];
+
+    function sayHello(){
+        echo 'Hello world';
+    }
+    sayHello();
+?>
     
 
-    
-?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,16 +15,9 @@
     <title>PHP Tutorials</title>
 </head>
 <body>
-    <h1>Products</h1>
-    <ul>
-        <?php foreach ($products as $product) { 
-            if($product['Price']<=30 && $product['Price']>5) {?>
-            <h4><?php echo $product['Name']; ?></h4>
-            <p> <?php echo $product['Price']; ?></p>
-        <?php } } ?>
-    </ul>
+    
 
-
+    
 
 
 </body>
