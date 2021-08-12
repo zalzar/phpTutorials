@@ -28,7 +28,8 @@
             $errors['ingredients']= 'ingredients is required';
         }else {
             $ingredients=$_POST['ingredients'];
-            if (!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/',$ingredients)) {
+
+            if (!preg_match('/^([a-zA-Z\s]+),+\s?([,a-zA-Z\s]*)*$/',$ingredients)) {
                 $errors['ingredients']= 'ingredients must be a comma separated list';
             }  
         }
@@ -40,6 +41,7 @@
         }else{
             //if there is no errors
             header('Location:index.php');
+            exit();
         }
     } // end of the post check
 ?>
