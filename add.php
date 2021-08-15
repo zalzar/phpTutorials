@@ -1,4 +1,5 @@
 <?php
+    include('config/db_connect.php');
     $errors = array('email'=>'','title'=>'','ingredients'=>'');
     $email = $title = $ingredients = '';
     if (isset($_POST['submit'])) {
@@ -39,9 +40,25 @@
             //if there is errors
             echo 'there are errors in the form';
         }else{
-            //if there is no errors
-            header('Location:index.php');
-            exit();
+            $email = mysqli_real_escape_string($conn,$_POST['email']);
+            $title = mysqli_real_escape_string($conn,$_POST['title']);
+            $ingredients = mysqli_real_escape_string($conn,$_POST['ingredients']);
+
+            //create the query for inserting to database
+            $sql = "INSERT INTO pizzas(title,email,ingredients) VALUES('$title','$email','$ingredients')";
+            
+            //save the insert values into db
+            if(mysqli_query($conn,$sql)){
+                //success save
+                header('Location:index.php');
+                exit();
+            }else{
+                //error - failed to insert to db
+                echo 'query error: '.mysqli_error($conn);
+
+            }
+
+            
         }
     } // end of the post check
 ?>
