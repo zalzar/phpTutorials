@@ -39,9 +39,16 @@
     }
 ?>
 <!DOCTYPE html>
+<head>
+    <style type="text/css">
+        .sk{
+            width: 225px;
+        }
+    </style>
+</head>
 <html lang="en">
     <?php include('templates/header.php') ?>
-    <div class="container center">
+    <div class="container center grey-text">
         <?php if($pizza): ?>
             <h4><?php echo htmlspecialchars($pizza['title']); ?></h4>
             <p>Created by: <?php echo htmlspecialchars($pizza['email']); ?></p>
@@ -52,7 +59,7 @@
             <!-- this part is the delete form -->
             <form action="details.php" method="POST">
                 <input type="hidden" name="id_to_delete" value="<?php echo $pizza['id']; ?>">
-                <input type="submit" name="delete" value="Delete" class="btn brand grey darken-3">
+                <input type="submit" name="delete" value="Delete" class="btn brand grey darken-3 sk">
             </form>
         <?php else: ?>
             <h5>No such pizza exist!</h5>
