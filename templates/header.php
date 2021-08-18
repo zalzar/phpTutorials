@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+$name = $_SESSION['name'];
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +27,8 @@
             padding: 20px;
 
         }
-        .pizza{
+
+        .pizza {
             width: 100px;
             margin: 40px auto -30px;
             display: block;
@@ -36,6 +43,7 @@
         <div class="container">
             <a href="./index.php" class="brand-logo brand-text">xoload</a>
             <ul id="nav-mobile" class="right hide-on-small-and-down">
+                <li><a href="#"><?php echo htmlspecialchars($name) ?></a></li>
                 <li><a href="./add.php" class="btn brand grey darken-3">Add a Pizza</a></li>
                 <p>
             </ul>

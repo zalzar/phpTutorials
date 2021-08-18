@@ -1,4 +1,3 @@
-
 <?php
 //      http://localhost/Tuts/examples/TernaryOperators.php
 //TernaryOperators
