@@ -1,8 +1,9 @@
 <?php
+// http://localhost/Tuts/index.php
+
 include('config/db_connect.php');
 //write the query
 $sql = ' SELECT title, ingredients, id FROM pizzas ORDER BY created_at';
-
 //make the query
 $result = mysqli_query($conn, $sql);
 
