@@ -12,10 +12,10 @@ $file = 'p1.txt';
 // $handle = fopen($file, 'r');
 
 // //read the file (all of the file)
-// echo fread($handle, filesize($file)); 
+// echo fread($handle, filesize($file));
 
 // //read the file (121 characters only)
-// echo fread($handle,121);
+// echo fread($handle, 121);
 
 
 // //read a single line
@@ -29,15 +29,15 @@ $file = 'p1.txt';
 // //writing to a file
 // $handle = fopen($file, 'r+');
 // //write a new line and override the first line and switch it to the sentence given
-// fwrite($handle,"\nEverything popular is wrong.");
+// fwrite($handle, "\nEverything popular is wrong.");
 
 
 
 // //writing to a file
 // $handle = fopen($file, 'a+');
 // //write a new line and add the sentence given in the file
-// fwrite($handle,"\nEverything popular is wrong.");
-//fclose($handle);
+// fwrite($handle, "\nEverything popular is wrong.");
+// fclose($handle);
 
 
 // //delete a file

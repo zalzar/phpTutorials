@@ -55,6 +55,7 @@ $name = $_SESSION['name'] ?? 'Guest';
             <a href="./index.php" class="brand-logo brand-text">xoload</a>
             <ul id="nav-mobile" class="right hide-on-small-and-down">
                 <li><a><?php echo htmlspecialchars($name); ?></a></li>
+                <!-- <li>(<?php echo htmlspecialchars($gender); ?>)</li> -->
                 <li><a href="./add.php" class="btn brand grey darken-3">Add a Pizza</a></li>
                 <p>
             </ul>
